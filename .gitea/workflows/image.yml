@@ -49,4 +49,3 @@ jobs:
           tags: |
             ${{ env.CONTAINER_REGISTRY }}/${{ env.GITEA_REPO }}:${{ env.GITEA_REF_NAME }}
             ${{ env.CONTAINER_REGISTRY }}/${{ env.GITEA_REPO }}:${{ env.GITEA_TAG }}                        
-
