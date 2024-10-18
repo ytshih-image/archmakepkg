@@ -12,7 +12,7 @@ RUN mkdir /script
 COPY run.sh /script
 
 ENV MINIO_HOST="minio.konchin.com"
-ENV MINIO_PORT="9000"
+ENV MINIO_PORT="443"
 ENV MINIO_BUCKET="archrepo"
 ENV MINIO_ACCESSKEY=""
 ENV MINIO_SECRETKEY=""
