@@ -1,7 +1,7 @@
 FROM archlinux:base-devel
 
 RUN pacman-key --init && pacman-key --populate
-RUN pacman -Syu --needed --noconfirm minio-client
+RUN pacman -Syu --needed --noconfirm nodejs minio-client
 
 RUN echo '%wheel ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 RUN useradd -G wheel -d /build builder
