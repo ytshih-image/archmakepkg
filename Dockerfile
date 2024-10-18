@@ -7,7 +7,7 @@ ADD rootca.pem /root
 RUN trust anchor /root/rootca.pem && update-ca-trust
 
 RUN echo '%wheel ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
-RUN useradd -G wheel -d /build builder && mkdir /build
+RUN useradd -mG wheel -d /build builder
 
 WORKDIR /build
 ENTRYPOINT ["/usr/bin/env"]
