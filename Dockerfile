@@ -1,7 +1,7 @@
 FROM archlinux:base-devel
 
 RUN pacman-key --init && pacman-key --populate
-RUN pacman -Syu --needed --noconfirm nodejs minio-client
+RUN pacman -Syu --needed --noconfirm nodejs minio-client git
 
 ADD rootca.pem /root
 RUN trust anchor /root/rootca.pem && update-ca-trust
