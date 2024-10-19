@@ -1,6 +1,6 @@
 FROM archlinux:base-devel
 
-RUN >> /etc/pacman.conf <<EOF
+RUN cat >> /etc/pacman.conf <<'EOF'
 [custom]
 SigLevel = Optional TrustAll
 Server = http://repo.konchin.com/$repo/os/$arch
