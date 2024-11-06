@@ -7,7 +7,7 @@ EOF
 RUN cat >> /etc/pacman.conf <<'EOF'
 [custom]
 SigLevel = Optional TrustAll
-Server = http://repo.konchin.com/$repo/os/$arch
+Server = https://repo.konchin.com/$repo/os/$arch
 EOF
 
 RUN pacman-key --init && pacman-key --populate
