@@ -29,6 +29,10 @@ jobs:
           images: |
             ghcr.io/${{ github.repository }}
 
+      - name: Set up rootca
+        run: |
+          echo "${{ vars.ROOTCA }}" | tee rootca.pem
+
       - name: Build and push Container images
         id: push
         uses: docker/build-push-action@v6
