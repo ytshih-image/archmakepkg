@@ -1,6 +1,6 @@
 FROM archlinux:base-devel
 
-ADD rootca.pem /root
+ADD rootca.pem /root/
 RUN trust anchor /root/rootca.pem && update-ca-trust
 
 RUN cat > /etc/pacman.d/mirrorlist <<'EOF'
